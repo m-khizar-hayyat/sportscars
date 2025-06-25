@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Car Extravaganza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(240, 242, 245); /* New: Very Light Grey */
+            color: rgb(34, 34, 34); /* New: Dark Charcoal Grey for general text */
+            line-height: 1.6;
+            overflow-y: scroll; /* Ensure scrollbar if content overflows */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: rgb(240, 242, 245); /* New: Matches body background */
+            padding: 150px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgb(34, 34, 34); /* New: Dark Charcoal for hero title */
+        }
+
+        .hero-content p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            opacity: 0.9; /* Slightly less opaque for better readability on light bg */
+            color: rgb(51, 51, 51); /* New: Darker grey for hero paragraph */
+        }
+
+        /* Main Introduction Section */
+        .main-intro-section {
+            background-color: rgb(255, 255, 255); /* New: Pure White */
+            padding: 80px 20px;
+            margin: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08); /* Adjusted shadow for light background */
+        }
+
+        .main-intro-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            color: rgb(0, 150, 136); /* New: Vibrant Teal for headings */
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .main-intro-section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            opacity: 1; /* Full opacity for main text on light background */
+            max-width: 700px;
+            margin: 0 auto;
+            color: rgb(34, 34, 34); /* New: Dark Charcoal Grey */
+        }
+
+        /* Car Category Sections */
+        .car-category-section {
+            background-color: rgb(255, 255, 255); /* New: Same as intro section */
+            padding: 60px 20px;
+            margin: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08); /* Adjusted shadow for light background */
+        }
+
+        .car-category-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: rgb(0, 150, 136); /* New: Vibrant Teal */
+            margin-bottom: 25px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .car-item {
+            background-color: rgb(230, 230, 230); /* New: Slightly Darker Light Grey card background */
+            padding: 20px;
+            border-radius: 6px;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted subtle shadow for light background */
+        }
+
+        .car-item img {
+            width: 100%; /* Make image fill its container */
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Cover the area, cropping if necessary */
+            border-radius: 4px; /* Slightly rounded corners for images */
+            margin-bottom: 15px; /* Space between image and text */
+        }
+
+        .car-item h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            color: rgb(51, 51, 51); /* New: Dark Grey for car names */
+        }
+
+        .car-item p {
+            font-size: 1em;
+            opacity: 1; /* Full opacity for descriptions on light background */
+            color: rgb(85, 85, 85); /* New: Medium Grey for descriptions */
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(220, 220, 220); /* New: Lighter grey for footer */
+            padding: 30px 0;
+            text-align: center;
+            opacity: 1; /* Full opacity for footer text */
+            font-size: 0.9em;
+            margin-top: 60px;
+            color: rgb(51, 51, 51); /* New: Dark grey for footer text */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3em;
+            }
+            .hero-content p {
+                font-size: 1.1em;
+            }
+            .main-intro-section h2, .car-category-section h2 {
+                font-size: 2em;
+            }
+            .car-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-content container">
+            <h1>SPORTS CAR EXTRAVAGANZA</h1>
+            <p>Dive into the world of precision engineering, breathtaking speed, and iconic designs.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduction" class="main-intro-section container">
+            <h2>THE ESSENCE OF HIGH PERFORMANCE</h2>
+            <p>Sports cars represent the pinnacle of automotive innovation, designed to thrill with their powerful engines, aerodynamic efficiency, and unparalleled driving dynamics. They embody a passion for speed and a commitment to engineering excellence that pushes the boundaries of what's possible on four wheels.</p>
+        </section>
+
+        <section id="ferrari" class="car-category-section container">
+            <h2>Ferrari: The Icon of Passion</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4PTlf_kJg6LD1yA1AwhPAzcRY6JeDmwB8Acc7Hc50YLiMrA9q5ZL2M99a&s=10" alt="Ferrari SF90 Stradale">
+                    <h3>Ferrari SF90 Stradale</h3>
+                    <p>Ferrari's first series-production PHEV, a masterpiece of hybrid power and performance.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm0OToK-4OL5zxYCd1RWjaMt69kyg-Rg1KM0xa1pOQb9NyfnJm7KvZEKw&s=10"" alt="Ferrari 488 GTB">
+                    <h3>Ferrari 488 GTB</h3>
+                    <p>A turbocharged V8 marvel, delivering an exhilarating and responsive driving experience.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpvhp42O68FtOO46QSjoM0aPSFlSxBR1EaQ&s"" alt="Ferrari 296 GTB">
+                    <h3>Ferrari 296 GTB</h3>
+                    <p>Revolutionary V6 hybrid power, combining electrifying performance with stunning agility.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lamborghini" class="car-category-section container">
+            <h2>Lamborghini: Untamed Power</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWE7OFQ1w_hKfvqaximc756X_vW1Fv2lMxOBOUV2wNt_gR6JFdtTR6bZw&s=10" alt="Lamborghini Aventador SVJ">
+                    <h3>Lamborghini Aventador SVJ</h3>
+                    <p>A record-breaking V12 beast, known for its aggressive aerodynamics and raw power.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpCQK6EtT-ut0JZ6Hp8shrdN0fb8eWt1wnKX24W0Kx9JRGsvcOYUzH3_Db&s=10"" alt="Lamborghini Huracán EVO">
+                    <h3>Lamborghini Huracán EVO</h3>
+                    <p>Cutting-edge dynamics and a naturally aspirated V10 for an unparalleled sensation.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwSoSdlNM4JLxDZ47g3N0VlJQBZQRYpNVGqCwKf5vvZoFQ6ItZKm5vmSU&s=10"" alt="Lamborghini Revuelto">
+                    <h3>Lamborghini Revuelto</h3>
+                    <p>The first V12 hybrid plug-in HPEV, pushing performance and sustainability boundaries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="porsche" class="car-category-section container">
+            <h2>Porsche: Precision and Performance</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ66u1Yi619sj10zc-OhX-S_ju01SidhpScg6dXFv8lXvR13_ju2V9Jsrw&s=10"" alt="Porsche 911 GT3">
+                    <h3>Porsche 911 GT3</h3>
+                    <p>A track-focused machine, perfectly blending motorsport tech with daily usability.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNtcSlUppMBJX6Kp8bcVYVOarD770zjqXZBA&s"" alt="Porsche 718 Cayman GT4 RS">
+                    <h3>Porsche 718 Cayman GT4 RS</h3>
+                    <p>A formidable mid-engine marvel, known for its balance and thrilling natural aspiration.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR84DgHBPva1KalvwC7TtoSNnVFLpGhbJQo7Zg_7c9iTr1U3E2gU16POyc&s=10"" alt="Porsche Taycan Turbo S">
+                    <h3>Porsche Taycan Turbo S</h3>
+                    <p>Redefining electric performance with breathtaking acceleration and Porsche dynamics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mclaren" class="car-category-section container">
+            <h2>McLaren: Formula 1 Heritage</h2>
+            <div class="car-grid">
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiQZDc2zphggDmjAh8DU0y1CUFo1a0U5kE4w&s" alt="McLaren 720S">
+                    <h3>McLaren 720S</h3>
+                    <p>Incredible aero efficiency and a powerful twin-turbo V8 for an immersive drive.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBZzILuHFlT32sQHv26h95BNSwb3hpQnpFqA&s"" alt="McLaren Artura">
+                    <h3>McLaren Artura</h3>
+                    <p>The first HPH supercar from McLaren, blending thrilling performance with electric capability.</p>
+                </div>
+                <div class="car-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgbkdOrIa4sPz6m89CZcnJ5mHLC9P_nGBhCg&s"" alt="McLaren Senna">
+                    <h3>McLaren Senna</h3>
+                    <p>A track-focused hypercar designed for the most visceral driving experience possible.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   </body>
+</html>
